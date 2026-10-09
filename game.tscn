@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://da8nnse7hu2wu"]
+
+[ext_resource type="Texture2D" uid="uid://f0utvxt0fri5" path="res://icon.svg" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://de78u6sepvyir" path="res://ball.tscn" id="2_e2o6t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y6cu"]
+size = Vector2(122, 122)
+
+[node name="Game" type="Node2D" unique_id=1304719287]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=958278532]
+position = Vector2(284, 310)
+scale = Vector2(1, 5.04)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2117673334]
+texture = ExtResource("1_80nbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1705978792]
+shape = SubResource("RectangleShape2D_5y6cu")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1717447432]
+position = Vector2(859, 313)
+scale = Vector2(1, 5.04)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=344963967]
+texture = ExtResource("1_80nbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=440181231]
+shape = SubResource("RectangleShape2D_5y6cu")
+
+[node name="Ball" parent="." unique_id=1892900076 instance=ExtResource("2_e2o6t")]
+position = Vector2(580, 347)
